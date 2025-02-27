@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-02-27T08:36:53.667957" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTestcases" source="/home/nb-suparida/automate-future-skill/testcases/LoginTestcases.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-27T08:36:53.752886" level="INFO">Opening browser 'chrome' to base url 'https://auth.fandom.com/signin?flow=9b6fb7ad-98c0-4d0a-a382-b984bad692bc'.</msg>
+<msg time="2025-02-27T08:36:53.787502" level="WARN">The chromedriver version (132.0.6834.159) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (133.0.6943.141); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-27T08:36:53.752638" elapsed="3.571761"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to login success with valid credential" line="12">
+<kw name="login with ${username} and ${password}" owner="LoginPageKeywords" source_name="login with ${username} and ${password}">
+<msg time="2025-02-27T08:36:57.326606" level="FAIL">Variable '${username}' not found.</msg>
+<status status="FAIL" start="2025-02-27T08:36:57.325986" elapsed="0.000669">Variable '${username}' not found.</status>
+</kw>
+<status status="FAIL" start="2025-02-27T08:36:57.324677" elapsed="0.002175">Variable '${username}' not found.</status>
+</test>
+<test id="s1-t2" name="As a user, I fail to login with invalid credential" line="16">
+<kw name="When user login to future skill platform with ${email} and ${invalid_password}">
+<msg time="2025-02-27T08:36:57.328418" level="FAIL">No keyword with name 'When user login to future skill platform with ${email} and ${invalid_password}' found.</msg>
+<status status="FAIL" start="2025-02-27T08:36:57.328375" elapsed="0.000077">No keyword with name 'When user login to future skill platform with ${email} and ${invalid_password}' found.</status>
+</kw>
+<kw name="Then future skill should display display validate login fail message as &quot;กรอกรหัสผ่านไม่ถูกต้อง&quot;" owner="LoginPageKeywords" source_name="future skill should display display validate login fail message as &quot;${expected_message}&quot;">
+<status status="NOT RUN" start="2025-02-27T08:36:57.328625" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2025-02-27T08:36:57.327029" elapsed="0.001738">No keyword with name 'When user login to future skill platform with ${email} and ${invalid_password}' found.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-27T08:36:57.329102" elapsed="0.066908"/>
+</kw>
+<status status="FAIL" start="2025-02-27T08:36:53.668584" elapsed="3.727573"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTestcases" id="s1" pass="0" fail="2" skip="0">LoginTestcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-27T08:36:53.787502" level="WARN">The chromedriver version (132.0.6834.159) detected in PATH at /usr/local/bin/chromedriver might not be compatible with the detected chrome version (133.0.6943.141); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
